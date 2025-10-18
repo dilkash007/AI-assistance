@@ -1,5 +1,2 @@
-os
-webbrowser
-datetime
-generativeai
-flask
+Flask==3.0.0
+google-generativeai==0.5.2
