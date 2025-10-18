@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dilkash AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>AI bye Dilkash Ask Any thing</h2>
+            <p>Aapke sawaalon aur commands ke liye taiyaar</p>
+        </div>
+        <div class="chat-box" id="chat-box">
+            <div class="message bot-message">
+                <p>Namaste! Main aapki kya sahayata kar sakta hoon?</p>
+            </div>
+        </div>
+        <div class="chat-input">
+            <form id="chat-form">
+                <input type="text" id="user-input" placeholder="Yahan apna message likhein..." autocomplete="off">
+                <button type="submit">
+                    <span class="material-symbols-outlined">send</span>
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
