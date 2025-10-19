@@ -3,30 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dilkash AI Assistant</title>
+    <title>Neural Interface // D.A.I. v8.0</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-    <div class="chat-container">
-        <div class="chat-header">
-            <h2>AI bye Dilkash Ask Any thing</h2>
-            <p>Aapke sawaalon aur commands ke liye taiyaar</p>
+    <canvas id="neural-core"></canvas>
+
+    <div class="interface-container">
+        <div class="system-telemetry">
+            <h3>SYSTEM STATUS</h3>
+            <p>AI CORE TEMP: <span id="telemetry-temp">72.5°C</span></p>
+            <p>NETWORK FLUX: <span id="telemetry-flux">98.9%</span></p>
+            <p>DATA STREAMS: <span id="telemetry-streams">4.2M/s</span></p>
+            <p>LAST SYNC: <span id="telemetry-sync">0.02ms</span></p>
         </div>
-        <div class="chat-box" id="chat-box">
-            <div class="message bot-message">
-                <p>Namaste! Main aapki kya sahayata kar sakta hoon?</p>
+
+        <div class="chat-wrapper">
+            <div class="chat-header">
+                <h1>D.A.I. // CHIMERA OS</h1>
+            </div>
+            <div class="chat-box" id="chat-box">
+                </div>
+            <div class="chat-input-area">
+                <div class="input-field-wrapper">
+                    <form id="chat-form">
+                        <input type="text" id="user-input" placeholder="Initiate neural link..." autocomplete="off" required>
+                        <button type="submit" id="send-btn" aria-label="Transmit">›</button>
+                    </form>
+                </div>
             </div>
         </div>
-        <div class="chat-input">
-            <form id="chat-form">
-                <input type="text" id="user-input" placeholder="Yahan apna message likhein..." autocomplete="off">
-                <button type="submit">
-                    <span class="material-symbols-outlined">send</span>
-                </button>
-            </form>
-        </div>
     </div>
+
+    <audio id="audio-boot" src="{{ url_for('static', filename='sfx/boot.mp3') }}" preload="auto"></audio>
+    <audio id="audio-keystroke" src="{{ url_for('static', filename='sfx/keystroke.mp3') }}" preload="auto"></audio>
+    <audio id="audio-send" src="{{ url_for('static', filename='sfx/send.mp3') }}" preload="auto"></audio>
+    <audio id="audio-receive" src="{{ url_for('static', filename='sfx/receive.mp3') }}" preload="auto"></audio>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
